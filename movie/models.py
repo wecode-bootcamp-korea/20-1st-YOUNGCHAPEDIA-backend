@@ -9,7 +9,7 @@ class Movie(models.Model):
     discription    = models.TextField(null = True)
     audience_count = models.IntegerField() 
     thumbnail_img  = models.URLField()
-    backgournd_img = models.URLField()
+    background_img = models.URLField()
     category_id    = models.ForeignKey('Category', on_delete = models.CASCADE)
     genre_id       = models.ManyToManyField('Genre', through = 'Movie_Genre')
     provider_id    = models.ManyToManyField('Provider', through = 'Movie_Provider')
